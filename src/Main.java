@@ -1,5 +1,9 @@
+import campus.people.FullTimeTeacher;
+import campus.people.Teacher;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Inicio proyecto final de java");
+        Teacher rojas = new FullTimeTeacher("01", "Cristian Rojas", "123", 40000.00, 3);
+        rojas.showPersonalData();
     }
 }
