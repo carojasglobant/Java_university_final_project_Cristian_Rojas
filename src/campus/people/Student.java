@@ -7,8 +7,8 @@ public class Student extends Person {
     private String studentID;
 
     public List<String> universityClassIds = new ArrayList<String>();
-    public Student(String idPersona, String name, String studentID) {
-        super(idPersona, name);
+    public Student(String idPersona, String name, int age,String studentID) {
+        super(idPersona, name, age);
         this.studentID=studentID;
     }
 

@@ -17,7 +17,7 @@ public class TeacherController {
     }
 
     public void listTeacherList(){
-        if(teacherList.size()>0) {
+        if(!teacherList.isEmpty()) {
             for (Teacher teacher : teacherList) {
                 teacher.showPersonalData();
             }

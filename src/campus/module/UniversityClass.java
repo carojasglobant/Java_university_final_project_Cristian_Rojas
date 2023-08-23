@@ -11,10 +11,11 @@ public class UniversityClass {
 
     private List<String> studentIds = new ArrayList<String>();
 
-    public UniversityClass(String classId, String className, String teacherId) {
+    public UniversityClass(String classId, String className, String teacherId, List<String> studentIds) {
         this.classId = classId;
         this.className = className;
         this.teacherId = teacherId;
+        this.studentIds = studentIds;
     }
 
     public String getClassId() {
@@ -34,6 +35,13 @@ public class UniversityClass {
     }
 
     public void enrollStudent(String studentId){
-        studentIds.add(studentId);
+        this.studentIds.add(studentId);
+    }
+
+    public void describe(){
+        System.out.println("Class name: " + this.className);
+        System.out.println("Class id: "+this.classId);
+        System.out.println("Teacher Assigned: "+ this.teacherId);
+        System.out.println("Amount of students: "+ this.studentIds.size());
     }
 }

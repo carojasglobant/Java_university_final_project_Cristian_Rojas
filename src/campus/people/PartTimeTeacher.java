@@ -3,8 +3,8 @@ package campus.people;
 public class PartTimeTeacher extends Teacher{
     final int hoursWorkedPerWeek;
 
-    public PartTimeTeacher(String idPersona, String name, String teacherId, Double baseSalary, int hoursWorkedPerWeek) {
-        super(idPersona, name, teacherId, baseSalary);
+    public PartTimeTeacher(String idPersona, String name, int age,String teacherId, Double baseSalary, int hoursWorkedPerWeek) {
+        super(idPersona, name, age,teacherId, baseSalary);
         this.hoursWorkedPerWeek = hoursWorkedPerWeek;
     }
 

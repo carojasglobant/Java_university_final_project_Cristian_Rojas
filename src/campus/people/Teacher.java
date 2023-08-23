@@ -11,8 +11,8 @@ public abstract class Teacher extends Person{
     public List<String> classIds = new ArrayList<String>();
 
     final int workedHoursAsFullTimeTeacher = 42;
-    public Teacher(String idPersona, String name, String teacherId, Double baseSalary){
-        super(idPersona,name);
+    public Teacher(String idPersona, String name, int age,String teacherId, Double baseSalary){
+        super(idPersona,name, age);
         this.teacherId = teacherId;
         this.baseSalary = baseSalary;
     }

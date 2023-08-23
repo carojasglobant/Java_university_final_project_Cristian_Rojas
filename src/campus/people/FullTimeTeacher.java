@@ -3,8 +3,8 @@ package campus.people;
 public class FullTimeTeacher extends Teacher{
 
     public int experienceYears;
-    public FullTimeTeacher(String idPersona, String name, String teacherId, Double baseSalary, int experienceYears) {
-        super(idPersona, name, teacherId, baseSalary);
+    public FullTimeTeacher(String idPersona, String name, int age,String teacherId, Double baseSalary, int experienceYears) {
+        super(idPersona, name, age,teacherId, baseSalary);
         this.experienceYears= experienceYears;
     }
 
