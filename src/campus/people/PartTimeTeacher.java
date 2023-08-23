@@ -1,7 +1,7 @@
 package campus.people;
 
 public class PartTimeTeacher extends Teacher{
-    private int hoursWorkedPerWeek;
+    final int hoursWorkedPerWeek;
 
     public PartTimeTeacher(String idPersona, String name, String teacherId, Double baseSalary, int hoursWorkedPerWeek) {
         super(idPersona, name, teacherId, baseSalary);
