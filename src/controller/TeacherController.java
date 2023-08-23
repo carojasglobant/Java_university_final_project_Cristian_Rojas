@@ -8,15 +8,26 @@ import java.util.List;
 public class TeacherController {
 
     public List<Teacher> teacherList = new ArrayList<Teacher>();
+
+    public TeacherController(){
+
+    }
     public TeacherController(List<Teacher> teacherList) {
         this.teacherList = teacherList;
     }
 
     public void listTeacherList(){
-        for (Teacher teacher: teacherList){
-            teacher.showPersonalData();
+        if(teacherList.size()>0) {
+            for (Teacher teacher : teacherList) {
+                teacher.showPersonalData();
+            }
+        } else {
+            System.out.println("There are no teachers yet");
         }
     }
 
+    public void addTeacher(Teacher teacher){
+        this.teacherList.add(teacher);
+    }
 
 }

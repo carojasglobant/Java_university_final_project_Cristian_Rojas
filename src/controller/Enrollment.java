@@ -10,10 +10,31 @@ public class Enrollment {
     ArrayList<Student> studentList = new ArrayList<Student>();
     ArrayList<UniversityClass> classList = new ArrayList<UniversityClass>();
 
+    public Enrollment(){
+
+    }
 
     public Enrollment(ArrayList<Student> studentList, ArrayList<UniversityClass> classList) {
         this.studentList = studentList;
         this.classList = classList;
+    }
+
+    public void createStudent(Student student){
+        this.studentList.add(student);
+    }
+
+    public void createClass(UniversityClass universityClass){
+        classList.add(universityClass);
+    }
+
+    public void showClasses(){
+        if(classList.size()>0) {
+            for (int i = 0; i < classList.size(); i++) {
+                System.out.println((i + 1) + " " + classList.get(i).getClassName());
+            }
+        } else {
+            System.out.println("There are no classes in this university");
+        }
     }
 
     public void searchStudentClassesById(String studentId){
