@@ -1,9 +1,14 @@
 package campus.people;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Teacher extends Person{
     protected String teacherId;
 
     protected Double baseSalary;
+
+    public List<String> classIds = new ArrayList<String>();
 
     final int workedHoursAsFullTimeTeacher = 42;
     public Teacher(String idPersona, String name, String teacherId, Double baseSalary){
