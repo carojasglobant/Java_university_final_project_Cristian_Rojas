@@ -1,6 +1,6 @@
 package template;
 
-public interface ViewOptions {
+public interface MainViewOptions {
     String OPTION_ONE = "1. See the list of teachers";
     String OPTION_TWO = "2. View class information";
     String OPTION_THREE = "3. Create a new student";

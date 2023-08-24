@@ -37,10 +37,20 @@ public class Enrollment {
 
     public void showClasses(Scanner sc){
         if(!classList.isEmpty()) {
-            System.out.println("Type a class number to view details");
+            this.listClasses();
+
+            System.out.println("Type a class number to view details (1,2 or 3, etc...): ");
             int classToDetail = sc.nextInt();
             if(classToDetail > 0 && classToDetail <= classList.size()) {
                 classList.get(classToDetail - 1).describe();
+                List<String> listOfStudentsRegisteredIds = classList.get(classToDetail-1).getStudentIds();
+                System.out.println("List of students: ");
+                for (Student student : studentList) {
+                    if (listOfStudentsRegisteredIds.contains(student.getStudentID())) {
+                        System.out.println("-" + student.getName());
+                    }
+                }
+                System.out.println(" ");
             } else{
                 System.out.println("Try again");
             }
@@ -111,7 +121,7 @@ public class Enrollment {
                     if (findClassById(classIdToAdd) && !newStudent.checkClass(classIdToAdd)) {
                         for(UniversityClass universityClass: this.classList){
                             if(universityClass.getClassId().equals(classIdToAdd)){
-                                universityClass.addStudentIdToClass(newStudent.getStudentID());
+                                universityClass.enrollStudent(newStudent.getStudentID());
                             }
                         }
                         newStudent.addClassToStudent(classIdToAdd);

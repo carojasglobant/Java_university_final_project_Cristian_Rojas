@@ -9,13 +9,16 @@ public class UniversityClass {
     public String className;
     public String teacherId;
 
+    public String teacherName;
+
     private List<String> studentIds = new ArrayList<String>();
 
-    public UniversityClass(String classId, String className, String teacherId, List<String> studentIds) {
+    public UniversityClass(String classId, String className, String teacherId, String teacherName, List<String> studentIds) {
         this.classId = classId;
         this.className = className;
         this.teacherId = teacherId;
         this.studentIds = studentIds;
+        this.teacherName = teacherName;
     }
 
     public String getClassId() {
@@ -38,14 +41,13 @@ public class UniversityClass {
         this.studentIds.add(studentId);
     }
 
-    public void addStudentIdToClass(String studentId){
-        studentIds.add(studentId);
-    }
 
     public void describe(){
         System.out.println("Class name: " + this.className);
         System.out.println("Class id: "+this.classId);
-        System.out.println("Teacher Assigned: "+ this.teacherId);
+        System.out.println("Teacher Assigned: "+ this.teacherName);
+        System.out.println("Teacher Id: "+ this.teacherId);
         System.out.println("Amount of students: "+ this.studentIds.size());
+
     }
 }
