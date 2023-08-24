@@ -31,7 +31,7 @@ public class View implements ViewOptions{
        List<String> listClassIds = new ArrayList<String>();
 
        System.out.println("Student Creation Interface: ");
-       System.out.println("Type the student id");
+       System.out.println("Type the personal id");
        sc.nextLine();
        String personId = sc.nextLine();
        System.out.println("Type the student full name");

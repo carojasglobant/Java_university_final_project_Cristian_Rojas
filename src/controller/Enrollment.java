@@ -74,6 +74,7 @@ public class Enrollment {
                     System.out.println("The student is in the class: " + universityClass.getClassName());
                     System.out.println("Class id: "+universityClass.getClassId());
                     System.out.println("Class Teacher: " + searchTeacherNameById(universityClass.getTeacherId(), teacherController));
+                    System.out.println(" ");
                 }
             }
         }
@@ -108,13 +109,18 @@ public class Enrollment {
                     keepAdingClasses = false;
                 } else {
                     if (findClassById(classIdToAdd) && !newStudent.checkClass(classIdToAdd)) {
+                        for(UniversityClass universityClass: this.classList){
+                            if(universityClass.getClassId().equals(classIdToAdd)){
+                                universityClass.addStudentIdToClass(newStudent.getStudentID());
+                            }
+                        }
                         newStudent.addClassToStudent(classIdToAdd);
                     } else {
                         System.out.println("Class not found or already registered");
                     }
                 }
             }
-            studentList.add(newStudent);
+            this.studentList.add(newStudent);
             System.out.println("Student successfully created");
         } else {
             System.out.println("There are no classes to add");

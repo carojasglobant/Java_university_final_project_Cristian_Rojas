@@ -19,6 +19,6 @@ public class PartTimeTeacher extends Teacher{
         System.out.println("A Part time teacher");
         System.out.println("This is his identification: "+this.idPersona);
         System.out.println("And this is his base Salary: "+ this.baseSalary);
-        System.out.println("Then he makes: "+ this.calculateSalary());
+        System.out.println("Then he makes: "+ this.calculateSalary()+"\n");
     }
 }

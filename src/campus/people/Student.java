@@ -27,4 +27,8 @@ public class Student extends Person {
         }
         return classRegistered;
     }
+
+    public String getStudentID() {
+        return studentID;
+    }
 }

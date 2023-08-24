@@ -38,6 +38,10 @@ public class UniversityClass {
         this.studentIds.add(studentId);
     }
 
+    public void addStudentIdToClass(String studentId){
+        studentIds.add(studentId);
+    }
+
     public void describe(){
         System.out.println("Class name: " + this.className);
         System.out.println("Class id: "+this.classId);

@@ -19,6 +19,6 @@ public class FullTimeTeacher extends Teacher{
         System.out.println("A Full time teacher");
         System.out.println("This is his identification: "+this.idPersona);
         System.out.println("And this is his base Salary: "+ this.baseSalary);
-        System.out.println("He makes: "+ this.calculateSalary());
+        System.out.println("He makes: "+ this.calculateSalary()+"\n");
     }
 }
