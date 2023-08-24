@@ -1,10 +1,12 @@
 package campus.people;
 
+import java.util.List;
+
 public class FullTimeTeacher extends Teacher{
 
     public int experienceYears;
-    public FullTimeTeacher(String idPersona, String name, int age,String teacherId, Double baseSalary, int experienceYears) {
-        super(idPersona, name, age,teacherId, baseSalary);
+    public FullTimeTeacher(String idPersona, String name, int age, String teacherId, Double baseSalary, List<String> classIds, int experienceYears) {
+        super(idPersona, name, age,teacherId, baseSalary, classIds);
         this.experienceYears= experienceYears;
     }
 
@@ -19,6 +21,6 @@ public class FullTimeTeacher extends Teacher{
         System.out.println("A Full time teacher");
         System.out.println("This is his identification: "+this.idPersona);
         System.out.println("And this is his base Salary: "+ this.baseSalary);
-        System.out.println("He makes: "+ this.calculateSalary()+"\n");
+        System.out.println("He makes: "+ this.calculateSalary());
     }
 }

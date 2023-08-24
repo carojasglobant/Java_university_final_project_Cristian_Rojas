@@ -1,10 +1,12 @@
 package campus.people;
 
+import java.util.List;
+
 public class PartTimeTeacher extends Teacher{
     final int hoursWorkedPerWeek;
 
-    public PartTimeTeacher(String idPersona, String name, int age,String teacherId, Double baseSalary, int hoursWorkedPerWeek) {
-        super(idPersona, name, age,teacherId, baseSalary);
+    public PartTimeTeacher(String idPersona, String name, int age, String teacherId, Double baseSalary, List<String> classIds, int hoursWorkedPerWeek) {
+        super(idPersona, name, age,teacherId, baseSalary, classIds);
         this.hoursWorkedPerWeek = hoursWorkedPerWeek;
     }
 
@@ -19,6 +21,6 @@ public class PartTimeTeacher extends Teacher{
         System.out.println("A Part time teacher");
         System.out.println("This is his identification: "+this.idPersona);
         System.out.println("And this is his base Salary: "+ this.baseSalary);
-        System.out.println("Then he makes: "+ this.calculateSalary()+"\n");
+        System.out.println("Then he makes: "+ this.calculateSalary());
     }
 }

@@ -1,13 +1,14 @@
 package template;
 
+import campus.module.UniversityClass;
 import campus.people.Student;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MainMainView implements MainViewOptions {
-    public MainMainView(){}
+public class MainView implements MainViewOptions {
+    public MainView(){}
 
     public void startProgram(){
         System.out.println("Hi welcome to Globant University!");
@@ -20,10 +21,6 @@ public class MainMainView implements MainViewOptions {
         System.out.println(MainViewOptions.OPTION_FOUR);
         System.out.println(MainViewOptions.OPTION_FIVE);
         System.out.println(MainViewOptions.EXIT);
-    }
-
-    public void showOptionWhenClaasCanBeSelected(){
-        System.out.println("Type a class number to see its information");
     }
 
    public Student showStudentCreation(Scanner sc){
@@ -43,4 +40,17 @@ public class MainMainView implements MainViewOptions {
 
        return new Student(personId, studentFullName, studentAge, studentId, listClassIds);
    }
+
+    public UniversityClass showClassCreation(Scanner sc){
+
+        System.out.println("Class Creation Interface: ");
+        System.out.println("Type the new Class id");
+        sc.nextLine();
+        String classId = sc.nextLine();
+        System.out.println("Type the class name");
+        String className = sc.nextLine();
+
+
+        return new UniversityClass(classId, className, "", "", new ArrayList<>());
+    }
 }

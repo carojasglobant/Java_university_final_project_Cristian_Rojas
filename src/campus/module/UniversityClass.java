@@ -11,7 +11,7 @@ public class UniversityClass {
 
     public String teacherName;
 
-    private List<String> studentIds = new ArrayList<String>();
+    private List<String> studentIds = new ArrayList<>();
 
     public UniversityClass(String classId, String className, String teacherId, String teacherName, List<String> studentIds) {
         this.classId = classId;
@@ -38,6 +38,18 @@ public class UniversityClass {
     }
 
     public void enrollStudent(String studentId){
+        this.studentIds.add(studentId);
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public void addStudentId(String studentId){
         this.studentIds.add(studentId);
     }
 

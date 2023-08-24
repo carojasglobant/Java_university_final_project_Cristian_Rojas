@@ -10,8 +10,9 @@ import java.util.Scanner;
 
 public class Enrollment {
 
-    ArrayList<Student> studentList = new ArrayList<Student>();
-    ArrayList<UniversityClass> classList = new ArrayList<UniversityClass>();
+
+    ArrayList<Student> studentList = new ArrayList<>();
+    ArrayList<UniversityClass> classList = new ArrayList<>();
 
     public Enrollment(){
 
@@ -146,4 +147,40 @@ public class Enrollment {
         }
         return foundClass;
     }
+
+    public void listStudents(){
+        for(int i=0; i<studentList.size(); i++){
+            System.out.println((i+1)+" "+studentList.get(i).getName()+" Student Id: "+studentList.get(i).getStudentID());
+        }
+    }
+
+    public boolean checkStudentInClass(String classId, String studentId){
+        boolean studentFound=false;
+        for(UniversityClass universityClass:classList){
+            List<String> studentsIdInClass = universityClass.getStudentIds();
+            for(String classStudentId : studentsIdInClass){
+                if (classStudentId.equals(studentId) && universityClass.getClassId().equals(classId)) {
+                    studentFound = true;
+                    break;
+                }
+            }
+        }
+        return studentFound;
+
+    }
+    public ArrayList<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void updateStudents(List<String> listOfIds, String classId){
+        for (int i=0; i< this.studentList.size();i++){
+            for (String idStudent: listOfIds){
+                if(studentList.get(i).getStudentID().equals(idStudent)){
+                    this.studentList.get(i).addClassToStudent(classId);
+                }
+            }
+        }
+    }
+
+
 }
