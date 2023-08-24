@@ -53,12 +53,18 @@ public class Main {
         enrollment.createStudent(studentFive);
         enrollment.createStudent(studentSix);
         // Instantiate Teachers
-        FullTimeTeacher fullTimeTeacherOne = new FullTimeTeacher("1001", "Javier Zapata", 32, "T1", 32000.00, new ArrayList<String>() {{add("C1");}},9);
-        FullTimeTeacher fullTimeTeacherTwo = new FullTimeTeacher("1002", "Fernando Velazques", 55, "T2", 64000.00, new ArrayList<String>() {{add("C2");}},30);
-        FullTimeTeacher fullTimeTeacherThree = new FullTimeTeacher("1003", "Marlon Lopez", 40, "T3", 40000.00, new ArrayList<String>() {{add("C3");}},15);
-        PartTimeTeacher partTimeTeacherOne = new PartTimeTeacher("1004", "Juan David Roble",20, "T4", 20000.00,new ArrayList<String>(),42);
-        PartTimeTeacher partTimeTeacherTwo = new PartTimeTeacher("1004", "Cristian Alejandro Rojas", 24,"T5", 24000.00, new ArrayList<String>(),42);
-        PartTimeTeacher partTimeTeacherThree = new PartTimeTeacher("1005", "Sebastian Lopez Mazp", 27,"T6", 40000.00,new ArrayList<String>(), 50);
+        FullTimeTeacher fullTimeTeacherOne = new FullTimeTeacher("1001", "Javier Zapata", 32, "T1", 32000.00, new ArrayList<>() {{
+            add("C1");
+        }},9);
+        FullTimeTeacher fullTimeTeacherTwo = new FullTimeTeacher("1002", "Fernando Velazques", 55, "T2", 64000.00, new ArrayList<>() {{
+            add("C2");
+        }},30);
+        FullTimeTeacher fullTimeTeacherThree = new FullTimeTeacher("1003", "Marlon Lopez", 40, "T3", 40000.00, new ArrayList<>() {{
+            add("C3");
+        }},15);
+        PartTimeTeacher partTimeTeacherOne = new PartTimeTeacher("1004", "Juan David Roble",20, "T4", 20000.00, new ArrayList<>(),42);
+        PartTimeTeacher partTimeTeacherTwo = new PartTimeTeacher("1004", "Cristian Alejandro Rojas", 24,"T5", 24000.00, new ArrayList<>(),42);
+        PartTimeTeacher partTimeTeacherThree = new PartTimeTeacher("1005", "Sebastian Lopez Mazp", 27,"T6", 40000.00, new ArrayList<>(), 50);
         teacherController.addTeacher(fullTimeTeacherOne);
         teacherController.addTeacher(fullTimeTeacherTwo);
         teacherController.addTeacher(fullTimeTeacherThree);

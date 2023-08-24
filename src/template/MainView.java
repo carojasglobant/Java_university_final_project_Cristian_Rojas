@@ -24,7 +24,7 @@ public class MainView implements MainViewOptions {
     }
 
    public Student showStudentCreation(Scanner sc){
-       List<String> listClassIds = new ArrayList<String>();
+       List<String> listClassIds = new ArrayList<>();
 
        System.out.println("Student Creation Interface: ");
        System.out.println("Type the personal id");

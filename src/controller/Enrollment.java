@@ -18,10 +18,6 @@ public class Enrollment {
 
     }
 
-    public Enrollment(ArrayList<Student> studentList, ArrayList<UniversityClass> classList) {
-        this.studentList = studentList;
-        this.classList = classList;
-    }
 
     public ArrayList<UniversityClass> getClassList() {
         return classList;
@@ -173,10 +169,10 @@ public class Enrollment {
     }
 
     public void updateStudents(List<String> listOfIds, String classId){
-        for (int i=0; i< this.studentList.size();i++){
-            for (String idStudent: listOfIds){
-                if(studentList.get(i).getStudentID().equals(idStudent)){
-                    this.studentList.get(i).addClassToStudent(classId);
+        for (Student student : this.studentList) {
+            for (String idStudent : listOfIds) {
+                if (student.getStudentID().equals(idStudent)) {
+                    student.addClassToStudent(classId);
                 }
             }
         }

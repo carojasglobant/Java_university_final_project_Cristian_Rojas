@@ -1,10 +1,8 @@
 package controller;
 
 import campus.module.UniversityClass;
-import campus.people.Student;
 import campus.people.Teacher;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
