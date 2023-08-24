@@ -30,4 +30,8 @@ public class TeacherController {
         this.teacherList.add(teacher);
     }
 
+    public List<Teacher> getTeacherList() {
+        return teacherList;
+    }
+
 }

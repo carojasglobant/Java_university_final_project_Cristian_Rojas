@@ -1,8 +1,11 @@
 package template;
 
 import campus.module.UniversityClass;
+import campus.people.Student;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class View implements ViewOptions{
     public View(){}
@@ -24,11 +27,21 @@ public class View implements ViewOptions{
         System.out.println("Type a class number to see its information");
     }
 
-    public void showClassInformation(List<UniversityClass> universityClasses, int classSelected){
-        if(classSelected-1>=0 && classSelected <= universityClasses.size()) {
-            universityClasses.get(classSelected - 1).describe();
-        } else {
-            System.out.println("Class not found");
-        }
-    }
+   public Student showStudentCreation(Scanner sc){
+       List<String> listClassIds = new ArrayList<String>();
+
+       System.out.println("Student Creation Interface: ");
+       System.out.println("Type the student id");
+       sc.nextLine();
+       String personId = sc.nextLine();
+       System.out.println("Type the student full name");
+       String studentFullName = sc.nextLine();
+       System.out.println("Type the student age");
+       int studentAge = sc.nextInt();
+       sc.nextLine();
+       System.out.println("Type the student Id");
+       String studentId = sc.nextLine();
+
+       return new Student(personId, studentFullName, studentAge, studentId, listClassIds);
+   }
 }

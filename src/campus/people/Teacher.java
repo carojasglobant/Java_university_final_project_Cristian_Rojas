@@ -20,4 +20,11 @@ public abstract class Teacher extends Person{
     public abstract Double calculateSalary();
 
     public abstract void showPersonalData();
+
+    public String getTeacherId() {
+        return teacherId;
+    }
+
+
+
 }

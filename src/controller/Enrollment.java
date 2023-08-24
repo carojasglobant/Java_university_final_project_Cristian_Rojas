@@ -2,9 +2,11 @@ package controller;
 
 import campus.module.UniversityClass;
 import campus.people.Student;
+import campus.people.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Enrollment {
 
@@ -33,28 +35,99 @@ public class Enrollment {
         classList.add(universityClass);
     }
 
-    public void showClasses(){
+    public void showClasses(Scanner sc){
         if(!classList.isEmpty()) {
-            for (int i = 0; i < classList.size(); i++) {
-                System.out.println((i + 1) + " " + classList.get(i).getClassName());
+            System.out.println("Type a class number to view details");
+            int classToDetail = sc.nextInt();
+            if(classToDetail > 0 && classToDetail <= classList.size()) {
+                classList.get(classToDetail - 1).describe();
+            } else{
+                System.out.println("Try again");
             }
-
         } else {
             System.out.println("There are no classes in this university");
 
         }
     }
 
-    public void searchStudentClassesById(String studentId){
+    public void listClasses(){
+        if(!classList.isEmpty()){
+            for (int i = 0; i < classList.size(); i++) {
+                System.out.println((i + 1) + " " + classList.get(i).getClassName()+" Class Id: "+classList.get(i).getClassId());
+            }
+        }
+    }
+
+
+    public void searchStudentClassesById(Scanner sc, TeacherController teacherController){
+        this.listClasses();
+        System.out.println("Type the student id: ");
+        String studentIdToFind = sc.next();
+
+        int studentFound=0;
+
         for (UniversityClass universityClass : classList ){
             List<String> studentsId =  universityClass.getStudentIds();
             for (String id: studentsId){
-                if(id.equals(studentId)){
-                    System.out.println("The student is in the class " + universityClass.getClassName());
+                if(id.equals(studentIdToFind)){
+                    studentFound ++;
+                    System.out.println("The student is in the class: " + universityClass.getClassName());
                     System.out.println("Class id: "+universityClass.getClassId());
-                    System.out.println("Class Teacher: "+universityClass.getTeacherId());
+                    System.out.println("Class Teacher: " + searchTeacherNameById(universityClass.getTeacherId(), teacherController));
                 }
             }
         }
+        if(studentFound==0){
+            System.out.println("Student not found");
+        }
+    }
+
+    public String searchTeacherNameById(String teacherId, TeacherController teacherController){
+        if(!teacherController.getTeacherList().isEmpty()) {
+            for (Teacher teacher : teacherController.getTeacherList()) {
+                if(teacher.getTeacherId().equals(teacherId)){
+                    return teacher.getName();
+                }
+            }
+        } else {
+            return "Null";
+        }
+        return "Null";
+    }
+
+    public void addClassesForNewStudent(Scanner sc, Student newStudent){
+
+        System.out.println("Now add the classes to the student");
+        if(!this.classList.isEmpty()){
+            boolean keepAdingClasses = true;
+            this.listClasses();
+            while (keepAdingClasses) {
+                System.out.println("Type the class id or exit to leave");
+                String classIdToAdd = sc.nextLine();
+                if(classIdToAdd.equals("exit")){
+                    keepAdingClasses = false;
+                } else {
+                    if (findClassById(classIdToAdd) && !newStudent.checkClass(classIdToAdd)) {
+                        newStudent.addClassToStudent(classIdToAdd);
+                    } else {
+                        System.out.println("Class not found or already registered");
+                    }
+                }
+            }
+            studentList.add(newStudent);
+            System.out.println("Student successfully created");
+        } else {
+            System.out.println("There are no classes to add");
+        }
+    }
+    public boolean findClassById(String classId){
+        boolean foundClass = false;
+        for (UniversityClass universityClass : classList ){
+            if(universityClass.getClassId().equals(classId)){
+                foundClass = true;
+                break;
+            }
+        }
+        return foundClass;
     }
 }
