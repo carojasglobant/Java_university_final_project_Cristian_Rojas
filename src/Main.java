@@ -3,8 +3,6 @@ import Model.modules.UniversityClass;
 import Model.actors.FullTimeTeacher;
 import Model.actors.PartTimeTeacher;
 import Model.actors.Student;
-import controller.Enrollment;
-import controller.TeacherController;
 import template.MainView;
 
 import java.util.ArrayList;

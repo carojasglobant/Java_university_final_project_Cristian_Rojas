@@ -1,8 +1,5 @@
 package Model.actors;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Teacher{
 
     public String name;
@@ -30,11 +27,6 @@ public abstract class Teacher{
     public Double getBaseSalary() {
         return baseSalary;
     }
-
-    public int getWorkedHoursAsFullTimeTeacher() {
-        return workedHoursAsFullTimeTeacher;
-    }
-
 
     public abstract Double calculateSalary();
 

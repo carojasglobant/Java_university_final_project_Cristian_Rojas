@@ -31,21 +31,10 @@ public class UniversityClass {
         return className;
     }
 
-    public String getTeacherId() {
-        return teacherId;
-    }
-
     public void addStudent(Student student){
         this.students.add(student);
     }
 
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId;
-    }
-
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
-    }
 
     public Student searchStudentInClass(String studentID){
         for (Student student : students){

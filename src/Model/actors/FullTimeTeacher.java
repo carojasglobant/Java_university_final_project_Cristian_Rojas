@@ -1,7 +1,5 @@
 package Model.actors;
 
-import java.util.List;
-
 public class FullTimeTeacher extends Teacher{
 
     public int experienceYears;

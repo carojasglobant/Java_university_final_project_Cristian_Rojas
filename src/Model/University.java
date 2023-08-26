@@ -4,7 +4,6 @@ import Model.actors.Student;
 import Model.actors.Teacher;
 import Model.modules.UniversityClass;
 
-import javax.swing.plaf.PanelUI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -103,11 +102,11 @@ public class University {
                         keepAddingClasses = false;
                     } else {
                         UniversityClass universityClass = searchUniversityClassByID(classIDToAdd);
-                        if (universityClass != null) {
+                        if (universityClass != null && universityClass.searchStudentInClass(studentID) == null) {
                             universityClass.addStudent(searchStudentByID(studentID));
                             System.out.println("Added successfully");
                         } else {
-                            System.out.println("Class not found");
+                            System.out.println("Class not found or already registered");
                         }
                     }
                 }
