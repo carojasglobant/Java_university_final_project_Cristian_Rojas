@@ -1,10 +1,5 @@
 package template;
 
-import Model.modules.UniversityClass;
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class MainView implements MainViewOptions {
     public MainView(){}
 
