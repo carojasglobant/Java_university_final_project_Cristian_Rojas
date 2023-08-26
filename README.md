@@ -36,5 +36,6 @@
  -   Main class 
  -   Packages and layers with proper naming 
  -   Reading and printing (it’s not necessary to do it from console, should not be on the data model)
-     
+
+# UML to solve the problem:
 ![alt UML](docs/img/GlobantUniversityUML.png)

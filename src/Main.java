@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Scaner to receive the inputs
+        // Scanner to receive the inputs
         Scanner sc = new Scanner(System.in);
 
         // start the view of the program
@@ -68,12 +68,8 @@ public class Main {
         university.addUniversityClass(universityClassTwo);
         university.addUniversityClass(universityClassThree);
 
-
-
         // A greeting to the user
         program.startProgram();
-
-        // boolean to define if program is running
 
         while (true){
             program.showOptions();

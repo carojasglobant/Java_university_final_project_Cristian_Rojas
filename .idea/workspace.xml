@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="Finalizo arreglo del modelo, actualizo readme">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/MainView.java" afterDir="false" />
-    </list>
+    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="Borro import innecesarios" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +88,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693033567506</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Corrijo pequeños importes">
+      <option name="closed" value="true" />
+      <created>1693033829543</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693033829543</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Borro import innecesarios">
+      <option name="closed" value="true" />
+      <created>1693033876755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693033876755</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +136,8 @@
     <MESSAGE value="actualizo git ignore" />
     <MESSAGE value="Se elimina clase person, clase enrollment y TeacherController, creo clase universidad, agrego atributos y controlo toda la aplicacion desde esta clase" />
     <MESSAGE value="Finalizo arreglo del modelo, actualizo readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalizo arreglo del modelo, actualizo readme" />
+    <MESSAGE value="Corrijo pequeños importes" />
+    <MESSAGE value="Borro import innecesarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Borro import innecesarios" />
   </component>
 </project>
