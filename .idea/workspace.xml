@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="intento agregar imagen en readme" />
+    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="actualizo .idea" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +30,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": -1
 }]]></component>
   <component name="ProjectId" id="2USSpnS17d5M0jG5RvXwHC9j3Qy" />
@@ -112,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693034168576</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="actualizo .idea">
+      <option name="closed" value="true" />
+      <created>1693034806538</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693034806538</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +156,7 @@
     <MESSAGE value="Corrijo pequeños importes" />
     <MESSAGE value="Borro import innecesarios" />
     <MESSAGE value="intento agregar imagen en readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="intento agregar imagen en readme" />
+    <MESSAGE value="actualizo .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizo .idea" />
   </component>
 </project>
