@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Scanner to receive the inputs
+        // Scanner to receive the input
         Scanner sc = new Scanner(System.in);
 
         // start the view of the program
