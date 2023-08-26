@@ -1,7 +1,7 @@
 package template;
 
-import campus.module.UniversityClass;
-import campus.people.Student;
+import Model.modules.UniversityClass;
+import Model.actors.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,23 +23,23 @@ public class MainView implements MainViewOptions {
         System.out.println(MainViewOptions.EXIT);
     }
 
-   public Student showStudentCreation(Scanner sc){
-       List<String> listClassIds = new ArrayList<>();
-
-       System.out.println("Student Creation Interface: ");
-       System.out.println("Type the personal id");
-       sc.nextLine();
-       String personId = sc.nextLine();
-       System.out.println("Type the student full name");
-       String studentFullName = sc.nextLine();
-       System.out.println("Type the student age");
-       int studentAge = sc.nextInt();
-       sc.nextLine();
-       System.out.println("Type the student Id");
-       String studentId = sc.nextLine();
-
-       return new Student(personId, studentFullName, studentAge, studentId, listClassIds);
-   }
+//   public Student showStudentCreation(Scanner sc){
+//       List<String> listClassIds = new ArrayList<>();
+//
+//       System.out.println("Student Creation Interface: ");
+//       System.out.println("Type the personal id");
+//       sc.nextLine();
+//       String personId = sc.nextLine();
+//       System.out.println("Type the student full name");
+//       String studentFullName = sc.nextLine();
+//       System.out.println("Type the student age");
+//       int studentAge = sc.nextInt();
+//       sc.nextLine();
+//       System.out.println("Type the student Id");
+//       String studentId = sc.nextLine();
+//
+//       return new Student(personId, studentFullName, studentAge, studentId, listClassIds);
+//   }
 
     public UniversityClass showClassCreation(Scanner sc){
 

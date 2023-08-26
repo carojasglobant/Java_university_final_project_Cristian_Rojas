@@ -1,7 +1,8 @@
-import campus.module.UniversityClass;
-import campus.people.FullTimeTeacher;
-import campus.people.PartTimeTeacher;
-import campus.people.Student;
+import Model.University;
+import Model.modules.UniversityClass;
+import Model.actors.FullTimeTeacher;
+import Model.actors.PartTimeTeacher;
+import Model.actors.Student;
 import controller.Enrollment;
 import controller.TeacherController;
 import template.MainView;
@@ -18,81 +19,58 @@ public class Main {
         MainView program = new MainView();
 
         // Start the controllers of the program
-        Enrollment enrollment = new Enrollment();
-        TeacherController teacherController = new TeacherController();
+        University university = new University();
 
         // Instantiate Students
-        Student studentOne = new Student("10007", "Cristian Londoño",17,"ST1", new ArrayList<>() {{
-            add("C1");
-            add("C2");
-            add("C3");
-        }});
-        Student studentTwo = new Student("10008", "Pablo Cuerno",19,"ST2", new ArrayList<>() {{
-            add("C1");
-        }});
-        Student studentThree = new Student("10009", "Juan Velez",21,"ST3", new ArrayList<>() {{
-            add("C3");
-        }});
-        Student studentFour = new Student("10010", "Pegro Gaviria",17,"ST4", new ArrayList<>() {{
-            add("C2");
-            add("C3");
-        }});
-        Student studentFive = new Student("10011", "Mariana Vanegas",16,"ST5", new ArrayList<>() {{
-            add("C1");
-            add("C2");
-            add("C3");
-        }});
-        Student studentSix = new Student("10012", "Laura Perez",18,"ST6", new ArrayList<>() {{
-            add("C1");
-            add("C2");
-        }});
-        enrollment.createStudent(studentOne);
-        enrollment.createStudent(studentTwo);
-        enrollment.createStudent(studentThree);
-        enrollment.createStudent(studentFour);
-        enrollment.createStudent(studentFive);
-        enrollment.createStudent(studentSix);
+        Student studentOne = new Student("Cristian Londoño","ST1");
+        Student studentTwo = new Student("Pablo Cuerno","ST2");
+        Student studentThree = new Student("Juan Velez","ST3");
+        Student studentFour = new Student("Pegro Gaviria","ST4");
+        Student studentFive = new Student("Mariana Vanegas","ST5");
+        Student studentSix = new Student("Laura Perez","ST6");
+        university.addStudent(studentOne);
+        university.addStudent(studentTwo);
+        university.addStudent(studentThree);
+        university.addStudent(studentFour);
+        university.addStudent(studentFive);
+        university.addStudent(studentSix);
         // Instantiate Teachers
-        FullTimeTeacher fullTimeTeacherOne = new FullTimeTeacher("1001", "Javier Zapata", 32, "T1", 32000.00, new ArrayList<>() {{
-            add("C1");
-        }},9);
-        FullTimeTeacher fullTimeTeacherTwo = new FullTimeTeacher("1002", "Fernando Velazques", 55, "T2", 64000.00, new ArrayList<>() {{
-            add("C2");
-        }},30);
-        FullTimeTeacher fullTimeTeacherThree = new FullTimeTeacher("1003", "Marlon Lopez", 40, "T3", 40000.00, new ArrayList<>() {{
-            add("C3");
-        }},15);
-        PartTimeTeacher partTimeTeacherOne = new PartTimeTeacher("1004", "Juan David Roble",20, "T4", 20000.00, new ArrayList<>(),42);
-        PartTimeTeacher partTimeTeacherTwo = new PartTimeTeacher("1004", "Cristian Alejandro Rojas", 24,"T5", 24000.00, new ArrayList<>(),42);
-        PartTimeTeacher partTimeTeacherThree = new PartTimeTeacher("1005", "Sebastian Lopez Mazp", 27,"T6", 40000.00, new ArrayList<>(), 50);
-        teacherController.addTeacher(fullTimeTeacherOne);
-        teacherController.addTeacher(fullTimeTeacherTwo);
-        teacherController.addTeacher(fullTimeTeacherThree);
-        teacherController.addTeacher(partTimeTeacherOne);
-        teacherController.addTeacher(partTimeTeacherTwo);
-        teacherController.addTeacher(partTimeTeacherThree);
+        FullTimeTeacher fullTimeTeacherOne = new FullTimeTeacher("Javier Zapata",  "T1", 32000.00,9);
+        FullTimeTeacher fullTimeTeacherTwo = new FullTimeTeacher( "Fernando Velazques",  "T2", 64000.00, 30);
+        FullTimeTeacher fullTimeTeacherThree = new FullTimeTeacher( "Marlon Lopez",  "T3", 40000.00, 15);
+        PartTimeTeacher partTimeTeacherOne = new PartTimeTeacher( "Juan David Roble", "T4", 20000.00, 42);
+        PartTimeTeacher partTimeTeacherTwo = new PartTimeTeacher( "Cristian Alejandro Rojas", "T5", 24000.00,42);
+        PartTimeTeacher partTimeTeacherThree = new PartTimeTeacher( "Sebastian Lopez Mazo", "T6", 40000.00, 50);
+        university.addTeacher(fullTimeTeacherOne);
+        university.addTeacher(fullTimeTeacherTwo);
+        university.addTeacher(fullTimeTeacherThree);
+        university.addTeacher(partTimeTeacherOne);
+        university.addTeacher(partTimeTeacherTwo);
+        university.addTeacher(partTimeTeacherThree);
         // Instantiate Classes
         UniversityClass universityClass = new UniversityClass("C1", "Physics", "T1", fullTimeTeacherOne.getName(), new ArrayList<>() {{
-            add("ST1");
-            add("ST2");
-            add("ST3");
-            add("ST6");
+            add(studentOne);
+            add(studentTwo);
+            add(studentThree);
+            add(studentSix);
         }});
         UniversityClass universityClassTwo = new UniversityClass("C2", "History of language", "T2", fullTimeTeacherTwo.getName(), new ArrayList<>() {{
-            add("ST1");
-            add("ST4");
-            add("ST5");
-            add("ST6");
+            add(studentOne);
+            add(studentFour);
+            add(studentFive);
+            add(studentSix);
         }});
         UniversityClass universityClassThree = new UniversityClass("C3", "Thermodynamic", "T3", fullTimeTeacherThree.getName(), new ArrayList<>() {{
-            add("ST1");
-            add("ST3");
-            add("ST4");
-            add("ST5");
+            add(studentOne);
+            add(studentThree);
+            add(studentFour);
+            add(studentFive);
         }});
-        enrollment.addClass(universityClass);
-        enrollment.addClass(universityClassTwo);
-        enrollment.addClass(universityClassThree);
+        university.addUniversityClass(universityClass);
+        university.addUniversityClass(universityClassTwo);
+        university.addUniversityClass(universityClassThree);
+
+
 
         // A greeting to the user
         program.startProgram();
@@ -101,32 +79,26 @@ public class Main {
 
         while (true){
             program.showOptions();
-            int mainOption= sc.nextInt();
-            switch (mainOption) {
+            int optionSelected= sc.nextInt();
+            switch (optionSelected) {
                 case 1 ->
                     // list teachers
-                        teacherController.listTeacherList(enrollment);
+                        university.listTeachers();
                 case 2 ->
                     // list classes and then a specific class
-                        enrollment.showClasses(sc);
+                        university.listClassesAndSelectOneToDescribe(sc);
                 case 3 -> {
-                    // Create a new student
-                    Student newStudent = program.showStudentCreation(sc);
-                    // Add the new student to a class
-                    enrollment.addClassesForNewStudent(sc, newStudent);
+                    // Create a new student and add him to class
+                        university.createStudentAndAddHimToClasses(sc);
                 }
                 case 4 -> {
-                    // Create new Class
-                    UniversityClass newUniversityClass = program.showClassCreation(sc);
-                    // Add students to the class
-                    teacherController.addClassAndAddStudents(sc, newUniversityClass, enrollment);
-
+                    // Create new Class and add students to the class
+                        university.createClassAndAddItsStudents(sc);
                 }
-                // Create a new class and add an existing teacher, students and relevant data
-
-                case 5 ->
+                case 5 ->{
                     // Search classes by student id
-                        enrollment.searchStudentClassesById(sc, teacherController);
+                    university.searchStudentClassesByStudentID(sc);
+                }
                 case 6 -> System.exit(0);
             }
 
