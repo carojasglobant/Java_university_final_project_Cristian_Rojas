@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="Borro import innecesarios" />
+    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="intento agregar imagen en readme" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693033876755</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="intento agregar imagen en readme">
+      <option name="closed" value="true" />
+      <created>1693034168576</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693034168576</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +146,7 @@
     <MESSAGE value="Finalizo arreglo del modelo, actualizo readme" />
     <MESSAGE value="Corrijo pequeños importes" />
     <MESSAGE value="Borro import innecesarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Borro import innecesarios" />
+    <MESSAGE value="intento agregar imagen en readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="intento agregar imagen en readme" />
   </component>
 </project>
