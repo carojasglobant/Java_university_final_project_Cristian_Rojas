@@ -85,18 +85,18 @@ public class Main {
                 case 2 ->
                     // list classes and then a specific class
                         university.listClassesAndSelectOneToDescribe(sc);
-                case 3 -> {
+                case 3 ->
                     // Create a new student and add him to class
                         university.createStudentAndAddHimToClasses(sc);
-                }
-                case 4 -> {
+
+                case 4 ->
                     // Create new Class and add students to the class
                         university.createClassAndAddItsStudents(sc);
-                }
-                case 5 ->{
+
+                case 5 ->
                     // Search classes by student id
-                    university.searchStudentClassesByStudentID(sc);
-                }
+                        university.searchStudentClassesByStudentID(sc);
+
                 case 6 -> System.exit(0);
             }
 

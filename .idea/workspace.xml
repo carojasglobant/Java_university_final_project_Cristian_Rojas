@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="Se elimina clase person, clase enrollment y TeacherController, creo clase universidad, agrego atributos y controlo toda la aplicacion desde esta clase">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/GlobantUniversityUml.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/GlobantUniversityUml.png" afterDir="false" />
+    <list default="true" id="17143114-7490-41b8-afa0-eb8d2ee74155" name="Changes" comment="Finalizo arreglo del modelo, actualizo readme">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/actors/FullTimeTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/actors/FullTimeTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/actors/PartTimeTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/actors/PartTimeTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/actors/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/actors/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/actors/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/actors/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/modules/UniversityClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/modules/UniversityClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Enrollment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TeacherController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/template/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +83,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693031693900</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finalizo arreglo del modelo, actualizo readme">
+      <option name="closed" value="true" />
+      <created>1693033567506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693033567506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +122,7 @@
     <MESSAGE value="Revert &quot;Agrego UML y Modifico README&quot;&#10;&#10;This reverts commit 504bc771" />
     <MESSAGE value="actualizo git ignore" />
     <MESSAGE value="Se elimina clase person, clase enrollment y TeacherController, creo clase universidad, agrego atributos y controlo toda la aplicacion desde esta clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se elimina clase person, clase enrollment y TeacherController, creo clase universidad, agrego atributos y controlo toda la aplicacion desde esta clase" />
+    <MESSAGE value="Finalizo arreglo del modelo, actualizo readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizo arreglo del modelo, actualizo readme" />
   </component>
 </project>
